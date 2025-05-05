@@ -13,6 +13,13 @@
 </div>
 
 ---
+## Preview
+<details>
+<summary>Click to see preview</summary>
+<img src="https://i.imgur.com/nGpuZGW.png" alt="Galaxies Web Preview" width="100%">
+</details>
+
+---
 ## Information about this project
 
 My attempt at making a functioning (at least) modern website for Galaxies. The old website posed significant issues to reliably host and maintain and is filled with old information, so a new one is required to provide accurate data.
