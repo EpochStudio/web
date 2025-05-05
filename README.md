@@ -16,7 +16,7 @@
 ## Preview
 <details>
 <summary>Click to see preview</summary>
-<img src="https://i.imgur.com/nGpuZGW.png" alt="Galaxies Web Preview" width="100%">
+<img src="https://i.imgur.com/Tm6gXas.png" alt="Galaxies Web Preview" width="100%">
 </details>
 
 ---
