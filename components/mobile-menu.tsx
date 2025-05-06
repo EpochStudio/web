@@ -22,14 +22,14 @@ export function MobileMenu() {
         <SheetHeader>
           <SheetTitle className="text-left flex items-center gap-2">
             <Image
-              src="https://i.imgur.com/ptZsZGJ.png"
-              alt="Galaxies Bot"
+              src="https://i.imgur.com/xyTgKVy.png"
+              alt="Galaxies App"
               width={24}
               height={24}
               className="rounded-full"
               unoptimized
             />
-            Galaxies Bot
+            Galaxies App
           </SheetTitle>
         </SheetHeader>
         <div className="flex flex-col gap-4 py-4">
@@ -94,7 +94,7 @@ export function MobileMenu() {
               href="https://discord.com/oauth2/authorize?client_id=814441758037377045&permissions=8589934591&scope=bot%20applications.commands"
               onClick={() => setOpen(false)}
             >
-              Invite Bot
+              Invite App
             </Link>
           </Button>
         </div>
