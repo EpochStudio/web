@@ -91,12 +91,12 @@ const faqs = {
     {
       question: "How much does Premium cost?",
       answer:
-        "Premium pricing will be available when the service returns on August 14th, 2024. You can contact us on our Discord server for more information or check our website for updates.",
+        "Premium pricing will be available when the service returns on 2025 Q2. You can contact us on our Discord server for more information or check our website for updates.",
     },
     {
       question: "How do I purchase Premium?",
       answer:
-        "When Premium returns on August 14th, 2024, you'll be able to purchase it through our Discord server or directly on our Patreon. Join our Discord server for the latest updates.",
+        "When Premium returns on 2025 Q2, you'll be able to purchase it through our Discord server or directly on our Patreon. Join our Discord server for the latest updates.",
     },
     {
       question: "Can I transfer Premium between servers?",
