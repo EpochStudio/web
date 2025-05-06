@@ -32,6 +32,28 @@ const faqs = {
       answer:
         "You can join our support server at https://discord.gg/Gjd6U8MMrP for help with any issues or questions you may have. You can also use the /help command in your server to see a list of commands and their usage.",
     },
+    {
+      question: "When will the next version release?",
+      answer:
+        "At Galaxies, we constantly update the bot to ensure our users get the best experience possible. This is usually done by the periodic updates we push out. However, there are no exact estimated release date for each version, as the time required to work on each version varies highly. You can join our support server for the latest development news on new updates and get a heads-up on whenever a new version is ready to be released!"
+    },
+  ],
+  staff: [
+    {
+      question: "How can I become a Staff Member at Galaxies Support Server?",
+      answer:
+        "Yes! To do so, please open a ticket at our support server, and state the position which you wish to apply for, and a Community Manager representative will be in touch with you shortly!"
+    },
+    {
+      question: "How can I apply for Developer Positions at Galaxies?",
+      answer:
+        "Currently developer applications are current CLOSED for Galaxies, and is currently offer-only. Meaning for now, you cannot become a developer at Galaxies unless you are offered a position by one of the Lead Developers."
+    },
+    {
+      question: "How do I report Support Server Staff Members/Developers misconduct?",
+      answer:
+      "If you believe one of our Support Server Staff Members/Developers are violating some form of rules, then you can report them by opening a ticket and a Community Manager or Lead Developer will assist you shortly. Please provide ample evidence when you create the ticket!"
+    }
   ],
   commands: [
     {
@@ -254,6 +276,7 @@ export default function FAQPage() {
                 <Tabs defaultValue="general" value={activeTab} onValueChange={setActiveTab} className="w-full">
                   <TabsList className="grid grid-cols-2 md:grid-cols-5 w-full">
                     <TabsTrigger value="general">General</TabsTrigger>
+                    <TabsTrigger value="staff">Staff</TabsTrigger>
                     <TabsTrigger value="commands">Commands</TabsTrigger>
                     <TabsTrigger value="features">Features</TabsTrigger>
                     <TabsTrigger value="premium">Premium</TabsTrigger>
@@ -294,6 +317,9 @@ export default function FAQPage() {
             </Link>
             <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
               Privacy
+            </Link>
+            <Link href="https://github.com/EpochStudio/web" className="text-sm text-muted-foreground hover:text-primary">
+              Github
             </Link>
           </div>
         </div>

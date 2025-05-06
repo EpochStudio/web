@@ -228,6 +228,9 @@ export default function TermsPage() {
             <Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary">
               Privacy
             </Link>
+            <Link href="https://github.com/EpochStudio/web" className="text-sm text-muted-foreground hover:text-primary">
+              Github
+            </Link>
           </div>
         </div>
       </footer>
