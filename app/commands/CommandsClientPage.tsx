@@ -1,16 +1,17 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import {useEffect, useState} from "react"
 import Link from "next/link"
-import { ArrowLeft, Search } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Input } from "@/components/ui/input"
-import { SiteHeader } from "@/components/site-header"
+import {ArrowLeft, Search} from "lucide-react"
+import {Button} from "@/components/ui/button"
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion"
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs"
+import {Input} from "@/components/ui/input"
+import {SiteHeader} from "@/components/site-header"
 
 // Command data structure from the language file
 // Might need a function to try and extract data later when we have new commands
+/*
 const commands = {
   moderation: [
     {
@@ -581,6 +582,7 @@ const commands = {
     },
   ],
 }
+*/
 
 // This is a client component now
 export default function CommandsClientPage() {
@@ -588,24 +590,36 @@ export default function CommandsClientPage() {
   const [activeTab, setActiveTab] = useState("moderation")
   const [searchResults, setSearchResults] = useState<
     {
-      category: string
       commands: Array<{
         name: string
         description: string
-        usage: string
-        example: string
       }>
     }[]
   >([])
   const [commandCount, setCommandCount] = useState(0)
+  const [commands, setCommands] = useState([])
 
-  // Calculate total command count
   useEffect(() => {
-    let count = 0
-    Object.values(commands).forEach((categoryCommands) => {
-      count += categoryCommands.length
-    })
-    setCommandCount(count)
+    const fetchCommands = async() => {
+      try {
+        const response = await fetch('/api/discord-application/');
+        let output;
+
+        if (response.ok) {
+          output = response.json();
+        }
+
+        setCommands(output);
+        setCommandCount(output.length)
+        return output;
+      } catch (err) {
+        console.error("Error while fetching Client Application Command", err)
+      }
+    }
+
+    (async() => {
+      await fetchCommands()
+    })()
   }, [])
 
   // Handle search
